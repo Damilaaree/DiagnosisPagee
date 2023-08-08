@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Better Health Diagnosis</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="The Place you come for your diagnosis for some minor ailments">
+  <meta name="author" content="Lucky Shrub">
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <div class="top">
+      <div class="header">
+        <a href="/" class="logo">BETTER HEALTH DIAGNOSTIC</a>
+        <ul class="links">
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/contact-us.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <section class="first">
+      <div class="first-container">
+        <h1 class="first-header">Diagnosis for a Better Health. <br>like we all know Health is Wealth</h1>
+        <p class="first-header-subtext"> This is a website you can visit for self diagnosis of minor ailments which
+          serves as a first aid box that you can easily run to for minor incident that
+          doesn't require you going to the hospital and the ailments you can easily do a self diagnosis for on this
+          website includes
+          <b>Headache, Insect Bite, Sore throat, Nasal Congestion, Heart Burn,
+            Back Pain, Motion Sickness, Cold Cough, Diarrhoea
+          </b>
+        </p>
+        <form class="search">
+          <input type="text" placeholder="Search ailments here.." list="ailmentsList" required minlength="2">
+          <datalist id="ailmentsList">
+            <option value="HeadAche"> HeadAche</option>
+            <option value="Diarrhoea"> Diarrhoea</option>
+            <option value="Sore Throat"> Sore Throat</option>
+            <option value="Nasal Congestion"> Nasal Congestion</option>
+            <option value="Heart Burn"> Heart Burn</option>
+            <option value="Back Pain"> Back Pain</option>
+            <option value="Motion Sickness"> Motion Sickness</option>
+            <option value="flu"> flu</option>
+            <option value="Insect Bite">  Insect Bite</option>
+          </datalist>
+          <button type="submit" class="first-button">Search</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <small> Copyright © Better Health Diagnostic </small>
+    </footer>
+  </div>
+  <div class="modal-backdrop">
+    <div class="modal">
+      <div class="modal-header">
+      <h1>DRUGS YOU CAN USE TO CURE HEADACHE</h1>
+      <button class="close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      </div>
+      <div class="modal-body">
+        <p>for curing <span class="ailment"></span> find below the drug that can be used to cure it: </p>
+        <ol class="drugs"></ol>
+
+      </div>
+      <div class="modal-footer">
+        <button class="close-btn">Ok</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>

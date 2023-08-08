@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Health Diagnosis</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="The Place you come for your diagnosis for some minor ailments">
+    <meta name="author" content="Lucky Shrub">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <div class="top">
+            <div class="header">
+                <a href="/" class="logo">BETTER HEALTH DIAGNOSTIC</a>
+                <ul class="links">
+                    <li><a href="/about.html">About us</a></li>
+                    <li><a href="/contact-us.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <section id="contact-us">
+            <div class="container">
+                <h2>Contact us</h2>
+                <form action="https://formsubmit.co/1ce1a6616b0f68ed72c965e308ff025a" method="POST">
+                    <!--Honeypot-->
+                    <input type="text" name="_honey" style="display: none;">
+                    <!--Disable Captcha-->
+                    <input type="hidden" name="_captcha" value="false">
+
+
+                    <div class="row">
+                        <div class="field col">
+                            <label for="first_name">First Name</label>
+                            <input type="text" name="first&nbsp;name" id="first_name">
+                        </div>
+                        <div class="field col">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" name="last&nbsp;name" id="last_name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="field">
+                        <label for="subject">Subject</label>
+                        <input type="subject" id="subject" name="subject">
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" placeholder="How can we help you .." id="message"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <small> Copyright © Better Health Diagnostic </small>
+        </footer>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "oyeboalemmanuel89@gmail.com",
+                Password: "813E9FF4173FC2B57CF044D72E0FED77CBEB",
+                To: 'oyebolaemmanuel899@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact form enquiry",
+                Body: "First Name " + document.getElementById("First Name").value
+                    + "<br> Last Name:  " + document.getElementById("Last Name").value
+                    + "<br> Email Address: " + document.getElementById("Email Address").value
+                    + "<br> Subject:  " + document.getElementById("Subject").value
+                    + "<br> message:  " + document.getElementById("message").value
+            }).then(
+                message => alert("message sent successfully")
+            );
+        }
+    </script>
+</body>

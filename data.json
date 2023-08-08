@@ -1,0 +1,49 @@
+[
+    {
+        "keywords":"cold, cough",
+        "title":"Flu",
+        "prescription":["cough syrup"]
+    },
+    {
+        "keywords":"Headache",
+        "title":"Headache",
+        "prescription":["Nsaids(Paracetamol)"]
+    },
+
+    {
+        "keywords":"Heart Burn",
+        "title":"Heart Burn",
+        "prescription":["Gaviscon"]
+    },
+
+    {
+        "keywords":"Sore Throat",
+        "title":"Sore Throat",
+        "prescription":["Strepsils"]
+    },
+    {
+        "keywords":"Nasal Congestion",
+        "title":"Nasal Congestion",
+        "prescription":["oral Anti histamine(loratidine)"]
+    },
+    {
+        "keywords":"Back Pain",
+        "title":"Back Pain",
+        "prescription":["Nsadis"]
+    },
+    {
+        "keywords":"Motion Sickness",
+        "title":"Motion Sickness",
+        "prescription":["Avomine"]
+    },
+    {
+        "keywords":"Diarrhoea",
+        "title":"Diarrhoea",
+        "prescription":["Loperamide"]
+    },
+    {
+        "keywords":"Insect Bite, insect bites, insects bite",
+        "title":"Insect Bite",
+        "prescription":["Anti histamine"]
+    }
+]
