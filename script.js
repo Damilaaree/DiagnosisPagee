@@ -2,7 +2,18 @@ const searchInput = document.querySelector(".search input"),
     search = document.querySelector(".search"),
     modalBackdrop = document.querySelector(".modal-backdrop"),
     modal = modalBackdrop.querySelector(".modal"),
-    closebtn = modalBackdrop.querySelectorAll(".close-btn")
+    closebtn = modalBackdrop.querySelectorAll(".close-btn");
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+    toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+console.log(isOpen);
+        toggleBtn.classList = isOpen
+        ? "fa-solid fa-bars"
+        : "fa-solid fa-bars"
+    }
 
 search.addEventListener("submit", showPrescription)
 closebtn.forEach(btn => {
