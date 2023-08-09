@@ -3,17 +3,12 @@ const searchInput = document.querySelector(".search input"),
     modalBackdrop = document.querySelector(".modal-backdrop"),
     modal = modalBackdrop.querySelector(".modal"),
     closebtn = modalBackdrop.querySelectorAll(".close-btn");
-    const toggleBtn = document.querySelector('.toggle_btn')
-    const toggleBtnIcon = document.querySelector('.toggle_btn i')
-    const dropDownMenu = document.querySelector('.dropdown_menu')
-    toggleBtn.onclick = function(){
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
-console.log(isOpen);
-        toggleBtn.classList = isOpen
-        ? "fa-solid fa-bars"
-        : "fa-solid fa-bars"
-    }
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const header = document.querySelector('.header')
+toggleBtn.onclick = function () {
+    header.classList.toggle('show')
+}
 
 search.addEventListener("submit", showPrescription)
 closebtn.forEach(btn => {
@@ -29,17 +24,17 @@ function showPrescription(event) {
         .then(result => {
             const filteredData = result.filter(pres => {
                 keywords = pres.keywords.split(', ')
-                if(pres.title.toLowerCase() === searchTerm.toLowerCase()) return true;
+                if (pres.title.toLowerCase() === searchTerm.toLowerCase()) return true;
                 let pass = false;
                 keywords.forEach(word => {
-                    if(word === searchTerm) {
+                    if (word === searchTerm) {
                         pass = true;
                     }
-                } )
+                })
                 return pass;
             })
 
-            if(filteredData.length>0){
+            if (filteredData.length > 0) {
                 modal.querySelector('.modal-header h1').textContent = `DRUGS YOU CAN USE TO CURE ${filteredData[0].title.toUpperCase()}`;
                 modal.querySelector('.modal-body>p>.ailment').textContent = filteredData[0].title;
                 const drugList = modal.querySelector('.drugs')
@@ -50,12 +45,13 @@ function showPrescription(event) {
                     drugList.appendChild(drugLi)
                 })
                 modalBackdrop.classList.add("show")
-            }else{
+            } else {
                 alert(`No prescription found for the search term "${searchTerm}"`)
             }
 
         })
         .catch(error => {
+            alert(`Error: "an error occurred while searching for a prescription for the search term "${searchTerm}"`);
             console.error(error)
         })
 }
