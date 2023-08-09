@@ -56,6 +56,7 @@ button {
   gap: 5px;
   display: none;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .links li > a {
@@ -66,6 +67,7 @@ button {
 
 .header {
   display: flex;
+  align-items: center;
 }
 
 .first {
@@ -231,16 +233,17 @@ button {
   color: black;
   display: grid;
   place-content: center;
-}
-
-.container {
-  min-width: 500px;
-  max-width: 1200px;
-  margin: auto;
+  
+  --btn-bg: var(--primary);
+  --btn-color: var(--white);
 }
 
 .container h2 {
   color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.container p{
   margin-bottom: 1rem;
 }
 
@@ -286,13 +289,8 @@ button {
   color: var(--white);
   font-weight: 600;
 }
-
-.row > .left {
-  width: 65%;
-}
-
-.row > .right {
-  width: 20%;
+.row > :not(.col) {
+  width: 100%;
 }
 
 section {
@@ -301,6 +299,7 @@ section {
 
 .container,
 .first-container {
+  margin: auto;
   max-width: 80vw;
 }
 
@@ -313,6 +312,9 @@ section {
 
 @media only screen and (max-width: 999px) {
   .header.show .links {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border: 0.5px solid #00000014;
     display: block;
     background-color: var(--white);
     color: var(--black, #000);
@@ -328,9 +330,17 @@ section {
     border-top-left-radius: 0;
     padding: 1rem;
     transition: all 0.3ms ease-in-out;
+    
+    --btn-bg: var(--white);
+    --btn-color: var(--primary);
   }
 
   .links > li {
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .links > li > a {
     display: block;
     padding: 0.5rem;
     margin-bottom: 0.25rem;
@@ -351,7 +361,36 @@ section {
   }
 }
 
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  padding: .85rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  font-weight: 600;
+}
+
+
+.d-none {
+  display: none;
+}
+
+
 @media only screen and (min-width: 1000px) {
+  .d-lg-none{
+    display: none !important;
+  }
+  .row > .left {
+    width: 65%;
+  }
+
+  .row > .right {
+    width: 20%;
+  }
   .header {
     max-width: 1200px;
     justify-content: space-between;
@@ -362,6 +401,8 @@ section {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
+    --btn-bg: var(--white);
+    --btn-color: var(--primary);
   }
 
   .toggle_btn {

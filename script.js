@@ -1,17 +1,18 @@
 const searchInput = document.querySelector(".search input"),
     search = document.querySelector(".search"),
     modalBackdrop = document.querySelector(".modal-backdrop"),
-    modal = modalBackdrop.querySelector(".modal"),
-    closebtn = modalBackdrop.querySelectorAll(".close-btn");
-const toggleBtn = document.querySelector('.toggle_btn')
-const toggleBtnIcon = document.querySelector('.toggle_btn i')
-const header = document.querySelector('.header')
+    modal = modalBackdrop?.querySelector(".modal"),
+    closebtn = modalBackdrop?.querySelectorAll(".close-btn"),
+    toggleBtn = document.querySelector('.toggle_btn'),
+    toggleBtnIcon = document.querySelector('.toggle_btn i'),
+    header = document.querySelector('.header');
+
 toggleBtn.onclick = function () {
     header.classList.toggle('show')
 }
 
-search.addEventListener("submit", showPrescription)
-closebtn.forEach(btn => {
+search?.addEventListener("submit", showPrescription)
+closebtn?.forEach(btn => {
     btn.onclick = () => {
         modalBackdrop.classList.remove("show")
     }

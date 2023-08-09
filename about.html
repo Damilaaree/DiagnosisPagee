@@ -1,45 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Better Health Diagnosis</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="The Place you come for your diagnosis for some minor ailments">
-    <meta name="author" content="Lucky Shrub">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="The Place you come for your diagnosis for some minor ailments"
+    />
+    <meta name="author" content="Lucky Shrub" />
+  </head>
 
-<body>
+  <body>
     <div class="page-wrapper">
-
-        <div class="top">
-            <div class="header">
-                <a href="/" class="logo">BETTER HEALTH DIAGNOSTIC</a>
-                <ul class="links">
-                    <li><a href="/about.html">About us</a></li>
-                    <li><a href="/contact-us.html">Contact us</a></li>
-                </ul>
+      <div class="top">
+        <nav class="header">
+          <a href="/" class="logo">BETTER HEALTH DIAGNOSTIC</a>
+          <div class="toggle_btn order-last">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul class="links">
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/contact-us.html">Contact us</a></li>
+            <a role="button" href="/" class="btn-primary">Get Started</a>
+          </ul>
+        </nav>
+      </div>
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="left">
+              <h2>About us</h2>
+              <p>
+                This webiste is mainly use for prescribing drugs for minor
+                ailment which simply helps to reduce the rate of emergency
+                hospitals get for minor ailment.
+              </p>
+              <a role="button" href="/" class="btn-primary">Get Started</a>
             </div>
-
+            <div class="right"></div>
+          </div>
         </div>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="left">
-                        <h2>About us</h2>
-                        <p>This webiste is mainly use for prescribing drugs for minor ailment which simply helps to
-                            reduce the rate of emergency hospitals get for minor ailment.</p>
-                    </div>
-                    <div class="right"></div>
-                </div>
-            </div>
-
-
-        </section>
-        <footer class="footer">
-            <small> Copyright © Better Health Diagnostic </small>
-        </footer>
+      </section>
+      <footer class="footer">
+        <small> Copyright © Better Health Diagnostic </small>
+      </footer>
     </div>
-</body>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
